@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // .gitnignore
 # next.js build output
 .next
@@ -9,4 +10,17 @@ node_modules/
 # Logs
 npm-debug.log*
 yarn-debug.log*
+=======
+// .gitnignore
+# next.js build output
+.next
+# dotenv environment variables file (build for Zeit Now)
+.env
+.env.build
+# Dependency directories
+node_modules/
+# Logs
+npm-debug.log*
+yarn-debug.log*
+>>>>>>> 415e5687869f83db6d8fef97d8c27e9bc2770b4a
 yarn-error.log*
