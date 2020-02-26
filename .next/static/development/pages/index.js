@@ -53,7 +53,14 @@ var Layout = function Layout(props) {
       lineNumber: 11
     },
     __self: this
-  }), props.children);
+  }), __jsx("div", {
+    className: "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, props.children));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
@@ -79,57 +86,85 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 var Navbar = function Navbar() {
-  return __jsx("div", {
+  return __jsx("nav", {
+    className: "navbar navbar-expand navbar-dark bg-dark mb-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 4
     },
     __self: this
-  }, __jsx("ul", {
+  }, __jsx("div", {
+    className: "container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: this
-  }, __jsx("li", {
+  }, __jsx("a", {
+    className: "navbar-brand",
+    href: "#",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
+    },
+    __self: this
+  }, "BitzPrice"), __jsx("div", {
+    className: "collapse navbar-collapse",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, __jsx("ul", {
+    className: "navbar-nav ml-auto",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, __jsx("li", {
+    className: "nav-item",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 10
     },
     __self: this
   }, __jsx("a", {
+    className: "nav-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 10
     },
     __self: this
   }, "Home"))), __jsx("li", {
+    className: "nav-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 12
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 13
     },
     __self: this
   }, __jsx("a", {
+    className: "nav-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 13
     },
     __self: this
-  }, "About")))));
+  }, "About")))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
@@ -4897,6 +4932,18 @@ var bind = __webpack_require__(/*! function-bind */ "./node_modules/function-bin
 
 module.exports = bind.call(Function.call, Object.prototype.hasOwnProperty);
 
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/build/polyfills/fetch/index.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/next/dist/build/polyfills/fetch/index.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals self */var fetch=self.fetch.bind(self);module.exports=fetch;module.exports.default=module.exports;
 
 /***/ }),
 
@@ -10447,34 +10494,68 @@ module.exports = function(module) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Components_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Components/Layout */ "./Components/Layout.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch/index.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Components_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Components/Layout */ "./Components/Layout.js");
+
 var _jsxFileName = "C:\\Users\\hamid\\Projects\\Bitzprice\\pages\\index.js";
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
-var Index = function Index() {
-  return __jsx(_Components_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: this
-  }, __jsx("div", {
+
+var Index = function Index(props) {
+  return __jsx(_Components_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: this
-  }, __jsx("h1", {
+  }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
     },
     __self: this
-  }, "Welcome to Bitz Prises.")));
+  }, __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, "Welcome to Bitz Prises."), props.bpi.time.updated));
+};
+
+Index.getInitialProps = function _callee() {
+  var result, data;
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(fetch('https://api.coindesk.com/v1/bpi/currentprice.json'));
+
+        case 2:
+          result = _context.sent;
+          _context.next = 5;
+          return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(result.json());
+
+        case 5:
+          data = _context.sent;
+          return _context.abrupt("return", {
+            bpi: data
+          });
+
+        case 7:
+        case "end":
+          return _context.stop();
+      }
+    }
+  });
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);

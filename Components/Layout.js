@@ -9,7 +9,10 @@ const Layout = (props) => (
             href="https://bootswatch.com/4/cerulean/bootstrap.min.css"/>
         </head>
         <Navbar/>
-        {props.children}
+        <div className ="container">
+            {props.children}
+        </div>
+        
 
     </div>
     

@@ -145,7 +145,14 @@ const Layout = props => __jsx("div", {
     lineNumber: 11
   },
   __self: undefined
-}), props.children);
+}), __jsx("div", {
+  className: "container",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 12
+  },
+  __self: undefined
+}, props.children));
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
 
@@ -169,57 +176,85 @@ var _jsxFileName = "C:\\Users\\hamid\\Projects\\Bitzprice\\Components\\Navbar.js
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const Navbar = () => __jsx("div", {
+const Navbar = () => __jsx("nav", {
+  className: "navbar navbar-expand navbar-dark bg-dark mb-4",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 4
   },
   __self: undefined
-}, __jsx("ul", {
+}, __jsx("div", {
+  className: "container",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 5
   },
   __self: undefined
-}, __jsx("li", {
+}, __jsx("a", {
+  className: "navbar-brand",
+  href: "#",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 6
+  },
+  __self: undefined
+}, "BitzPrice"), __jsx("div", {
+  className: "collapse navbar-collapse",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 7
+  },
+  __self: undefined
+}, __jsx("ul", {
+  className: "navbar-nav ml-auto",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 8
+  },
+  __self: undefined
+}, __jsx("li", {
+  className: "nav-item",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 9
   },
   __self: undefined
 }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "/",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 6
+    lineNumber: 10
   },
   __self: undefined
 }, __jsx("a", {
+  className: "nav-link",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 6
+    lineNumber: 10
   },
   __self: undefined
 }, "Home"))), __jsx("li", {
+  className: "nav-item",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 7
+    lineNumber: 12
   },
   __self: undefined
 }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "/about",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 7
+    lineNumber: 13
   },
   __self: undefined
 }, __jsx("a", {
+  className: "nav-link",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 7
+    lineNumber: 13
   },
   __self: undefined
-}, "About")))));
+}, "About")))))));
 
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
 
@@ -1938,31 +1973,42 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Components_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Components/Layout */ "./Components/Layout.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Components/Layout */ "./Components/Layout.js");
 var _jsxFileName = "C:\\Users\\hamid\\Projects\\Bitzprice\\pages\\index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const Index = () => __jsx(_Components_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 4
-  },
-  __self: undefined
-}, __jsx("div", {
+
+const Index = props => __jsx(_Components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 5
   },
   __self: undefined
-}, __jsx("h1", {
+}, __jsx("div", {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 6
   },
   __self: undefined
-}, "Welcome to Bitz Prises.")));
+}, __jsx("h1", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 7
+  },
+  __self: undefined
+}, "Welcome to Bitz Prises."), props.bpi.time.updated));
+
+Index.getInitialProps = async function () {
+  const result = await fetch('https://api.coindesk.com/v1/bpi/currentprice.json');
+  const data = await result.json();
+  return {
+    bpi: data
+  };
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
@@ -2032,6 +2078,17 @@ module.exports = require("core-js/library/fn/symbol/iterator");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/weak-map");
+
+/***/ }),
+
+/***/ "isomorphic-unfetch":
+/*!*************************************!*\
+  !*** external "isomorphic-unfetch" ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("isomorphic-unfetch");
 
 /***/ }),
 

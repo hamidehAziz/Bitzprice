@@ -6,6 +6,8 @@
 .env.build
 # Dependency directories
 node_modules/
+server/
+statics/runtime/
 # Logs
 npm-debug.log*
 yarn-debug.log*
