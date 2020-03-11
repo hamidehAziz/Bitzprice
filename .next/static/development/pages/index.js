@@ -228,40 +228,81 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Prices, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 8
+          lineNumber: 9
         },
         __self: this
       }, __jsx("ul", {
         className: "list-group",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 9
+          lineNumber: 10
         },
         __self: this
       }, __jsx("li", {
         className: "list-group-item",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
-        },
-        __self: this
-      }, "Bitcoin rate for ", this.props.bpi.USD.description, ": ", __jsx("span", {
-        "class": "badge badge-primary",
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 11
         },
         __self: this
-      }, this.props.bpi.USD.code), __jsx("strong", {
+      }, "Bitcoin rate for ", this.props.bpi[this.state.currency].description, ":", __jsx("span", {
+        className: "badge badge-primary",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 13
         },
         __self: this
-      }, this.props.bpi.USD.rate))));
+      }, this.props.bpi[this.state.currency].code), __jsx("strong", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        },
+        __self: this
+      }, this.props.bpi[this.state.currency].rate))), __jsx("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        },
+        __self: this
+      }), __jsx("select", {
+        className: "form-control",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            currency: e.target.value
+          });
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        },
+        __self: this
+      }, __jsx("option", {
+        value: "USD",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20
+        },
+        __self: this
+      }, "USD"), __jsx("option", {
+        value: "GBP",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      }, "GBP"), __jsx("option", {
+        value: "EUR",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22
+        },
+        __self: this
+      }, "EUR")));
     }
   }]);
 

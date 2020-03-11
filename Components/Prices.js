@@ -4,15 +4,23 @@ class Prices extends React.Component {
     }
 
     render() {
+
         return ( 
             <div> 
                 <ul className="list-group">
                   <li className="list-group-item">
-                   Bitcoin rate for {this.props.bpi.USD.description}: <span
-                    class = "badge badge-primary">{this.props.bpi.USD.code}</span> 
-                        <strong>{this.props.bpi.USD.rate}</strong>
+                   Bitcoin rate for {this.props.bpi[this.state.currency].description}: 
+                  <span className = "badge badge-primary">{this.props.bpi[this.state.currency].code}</span> 
+                  <strong>{this.props.bpi[this.state.currency].rate}</strong>
                  </li>  
                 </ul>
+                <br/>
+
+                <select  className ='form-control' onChange={e => this.setState({currency: e.target.value})}>
+                <option value="USD">USD</option>
+                <option value="GBP">GBP</option>
+                <option value="EUR">EUR</option>
+                </select>
             </div>
         );
 
