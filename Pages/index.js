@@ -1,11 +1,13 @@
 import Fetch from 'isomorphic-unfetch';
 import Layout from '../Components/Layout';
 
+import Prices from'../Components/Prices';
+
 const Index = (props) => (
     <Layout>
         <div>
-            <h1>Welcome to Bitz Prises.</h1>
-            {props.bpi.time.updated}
+            <h1>Welcome to BitzPrice</h1>
+            <Prices bpi = {props.bpi}/>
         </div>
     </Layout>
 );
@@ -16,8 +18,8 @@ Index.getInitialProps =  async function(){
     const data = await result.json();
 
     return {
-        bpi: data
+        bpi: data.bpi
     }; 
 };
 
-export default Index;
+export default Index; 
